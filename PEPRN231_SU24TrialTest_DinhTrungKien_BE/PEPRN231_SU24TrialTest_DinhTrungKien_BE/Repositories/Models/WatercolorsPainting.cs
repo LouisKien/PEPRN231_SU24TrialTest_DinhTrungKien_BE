@@ -8,7 +8,7 @@ namespace PEPRN231_SU24TrialTest_DinhTrungKien_BE.Repositories.Models
     {
         [Key]
         public string PaintingId { get; set; } = null!;
-        [RegularExpression(@"^([A-Z][a-z0-9]*\s?)+$")]
+        [RegularExpression(@"^(([A-Z][a-z0-9]*|\d+)\s)*([A-Z][a-z0-9]*|\d+)$", ErrorMessage = "Each word must start with a capital letter and can include lowercase letters, spaces, and digits.")]
         public string PaintingName { get; set; } = null!;
         public string? PaintingDescription { get; set; }
         public string? PaintingAuthor { get; set; }
